@@ -1,0 +1,160 @@
+@import 'mixin';
+
+main {
+    font-family: "Plus Jakarta Sans", sans-serif;
+
+    .first-sect {
+        margin: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 30px;
+
+        h2 {
+            font-weight: 700;
+            font-size: 2.5em;
+        }
+
+        span {
+            font-size: 1em;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .sponsor-icons-sect {
+            width: 100%;
+
+        }
+
+    }
+
+    .start-btn {
+        margin: 20px 0;
+        width: fit-content;
+        @include button();
+        border: 1px solid rgba(128, 128, 128, 0.293);
+        padding: 10px 20px;
+        font-weight: 500;
+        transition: all 0.4s ease;
+
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+    }
+
+    .second-sect {
+        margin: 100px 0;
+
+        .row {
+            align-items: center;
+
+            .services-text {
+                span {
+                    font-weight: 600;
+                }
+
+                h1 {
+                    font-weight: 700;
+                }
+
+                p {
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .row {
+            row-gap: 25px;
+            margin: 25px 0;
+
+            .box {
+                background-color: #F6F6F6;
+                border-radius: 10px;
+                text-align: start;
+                transition: all 0.6s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+
+                .box-border {
+                    display: flex;
+                    justify-content: center;
+                    border: 1px dotted rgba(128, 128, 128, 0.466);
+                    padding: 20px;
+                    border-radius: 10px;
+                    margin: 10px;
+
+                    .box-text {
+                        width: 80%;
+
+                        svg {
+                            width: 45px;
+                            height: 45px;
+                        }
+
+                        h4 {
+                            font-weight: 600;
+                            font-size: 20px;
+                            padding: 15px 0;
+                        }
+
+                        p {
+                            font-size: 18px;
+                            color: rgba(29, 29, 36, 0.75);
+                        }
+
+                        button {
+                            @include button();
+                            background-color: transparent;
+                            border-radius: 50px;
+                            padding: 7px 18px;
+                            border: 1px solid rgba(128, 128, 128, 0.366);
+                            transition: all 0.4s ease;
+
+                            &:hover {
+                                background-color: black;
+                                color: white;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .thrd-sect {
+        width: 100%;
+        background-color: #F6F8F1;
+
+        .members-count {
+            padding: 50px 0;
+
+            .services-text{
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0;
+                    gap: 10px;
+                    li{
+                        list-style-type: none;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .row {
+                align-items: center;
+                .images {
+                    display: flex;
+                }
+            }
+
+        }
+    }
+}
